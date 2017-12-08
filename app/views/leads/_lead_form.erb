@@ -77,9 +77,7 @@
         <div class="update-lead-form">
           <div class="form-group">
             <%= label_tag :latest_outreach, "Latest Outreach" %>
-            <%= text_area_tag :outreaches do |outreach|%>
-              <%= outreach.text_field :latest_outreach, {class: 'form-control'} %>
-            <% end %>
+            <%= text_area_tag :latest_outreach %>
           </div>
           <div class="form-group">
             <div class="i-checks">

@@ -33,6 +33,20 @@
               <button id="button-hangup" class="btn btn-danger">Hangup</button>
             </div>
             <div id="log"></div>
+<!-- Auto Text -->
+            <div class="card-header d-flex align-items-center">
+              <h2 class="h5 display">Auto Text</h2>
+            </div>
+            
+            <%= form_tag "/text" do %>
+              <%= hidden_field_tag :phone, @lead.phone %>
+              <%= hidden_field_tag :body, "Hi #{@lead.first_name}, This is Rena from the Actualize coding bootcamp. Do you have a minute to talk?" %>
+              <div class="col-sm-3">
+                <%= submit_tag "Send Auto-Text", {class: "form-control btn btn-info"} %> 
+              </div>
+            <%end%>
+            
+<!-- Auto Text End -->
             <div class="card-header d-flex align-items-center">
               <h2 class="h5 display">Send Custom Text Message</h2>
             </div>

@@ -1,0 +1,19 @@
+<section class="forms">
+  <div class="container-fluid">
+    <header>
+      <h1 class="h3 display">Settings</h1>
+    </header>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <%= form_tag "/settings", method: :patch do %>
+          <div class="card">
+            <label>Auto-text message</label>
+            <textarea name="auto_text" rows="2"><%=@auto_text%></textarea>
+          </div>
+          <input type="submit" value="Save">
+        <%end%>
+      </div>
+    </div>
+  </div>
+</section>

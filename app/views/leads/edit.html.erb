@@ -41,16 +41,16 @@
             </div>
 
             <%= form_tag "/text", {class: "form-horizontal text-form"} do %>
-            <div class="form-group row">
+            <div hidden class="form-group row">
               <%= label_tag :phone, "Phone", {class: 'col-sm-2'} %>
               <div class="col-sm-10">
                 <%= text_field_tag :phone, @lead.phone, {class: "form-control form-control-warning"} %>
               </div>
             </div>
-            <div class="form-group row">
+            <div hidden class="form-group row">
               <%= label_tag :body, "Text Body", {class: 'col-sm-2'} %>
               <div class="col-sm-10">
-                <%= text_area_tag :body, nil, {class: "form-control form-control-warning"} %>
+                <textarea class="form-control form-control-warning">Hi, <%= @lead.first_name %>! This is Rena from the Actualize coding bootcamp. Do you have a minute to talk?</textarea>
               </div>
             </div>
             <div class="form-group row">
@@ -59,10 +59,6 @@
               </div>
             </div>
             <% end %>
-
-            <!-- TODO: The actual content of the text message should say, "Hi, FIRST NAME! This is Rena from the Actualize coding bootcamp. Do you have a minute to talk?" -->
-
-            <!-- TODO: The FIRST NAME should be replaced with the lead's actual first name. -->
 
             <!-- TODO: If the lead's actual first name has more than one word, only use the first word.-->
 
